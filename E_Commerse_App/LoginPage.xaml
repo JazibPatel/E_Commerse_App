@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginApp.LoginPage"
+             Title="LoginPage">
+
+    <Grid RowDefinitions="50,200,50,50,100"
+           ColumnDefinitions="*,2*"
+           BackgroundColor="Black"
+           Padding="10,10,10,10"
+           x:Name="myGrid">
+
+        <Button 
+            Grid.ColumnSpan="2"
+            Text="Light"
+            HeightRequest="40"
+            HorizontalOptions="End"
+            BackgroundColor="White"
+            TextColor="Black"
+            x:Name="WDbtn"
+            Clicked="WDbtn_Clicked"/>
+
+        <Label Grid.Row="1"
+        Text="Login Page"
+        HorizontalOptions="CenterAndExpand"
+        TextColor="#FFBF34"
+        FontSize="40"
+        FontFamily="Kugile"
+        FontAttributes="Bold"
+        Margin="0,30,0,30"
+        Grid.ColumnSpan="2"
+           x:Name="hading"/>
+
+        <Label Text="Email"
+        FontSize="Medium"
+        TextColor="White"
+        Grid.Row="2"
+        VerticalOptions="Center"/>
+
+        <Entry Grid.Row="2"
+        Grid.Column="1"
+        Placeholder="Enter your xyz@gmail.com"
+        TextColor="White"
+        PlaceholderColor="White"
+           x:Name="emailLable"/>
+
+        <Label Text="Password"
+        FontSize="Medium"
+        TextColor="White"
+        Grid.Row="3"
+        VerticalOptions="Center"/>
+
+        <Entry Grid.Row="3"
+        Grid.Column="1"
+        Placeholder="Pas*******rd"
+        TextColor="White"
+        PlaceholderColor="White"
+        IsPassword="True"
+        x:Name="passLable"/>
+
+        <CheckBox IsChecked="False"
+           VerticalOptions="Center"
+           Color="Blue" 
+           Grid.Row="3"
+           Grid.Column="1"
+           HorizontalOptions="End"
+           CheckedChanged="CheckBox_CheckedChanged"/>
+
+        <Button Text="Login"
+             HorizontalOptions="CenterAndExpand"
+             FontSize="Medium"
+             FontAttributes="Bold"
+             Grid.Row="4"
+             Grid.ColumnSpan="2"
+             BackgroundColor="#FFBF34"
+             TextColor="Black"
+             Margin="0,40,0,0"
+            x:Name="loginBtn"
+Clicked="loginBtn_Clicked"/>
+
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="LoginApp.RegisterPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="RegisterPage">
+    <ScrollView>
+        <Grid
+            x:Name="myGrid"
+            Padding="10"
+            BackgroundColor="Black"
+            ColumnDefinitions="*,2*"
+            RowDefinitions="50,200,50,50,50,50,50,100">
+
+            <Button
+                x:Name="WDbtn"
+                Grid.ColumnSpan="2"
+                BackgroundColor="White"
+                Clicked="WDbtn_Clicked"
+                HeightRequest="40"
+                HorizontalOptions="End"
+                Text="Light"
+                TextColor="Black" />
+
+            <Label
+                x:Name="hading"
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                Margin="0,30,0,30"
+                FontAttributes="Bold"
+                FontFamily="Kugile"
+                FontSize="40"
+                HorizontalOptions="CenterAndExpand"
+                Text="Register Page"
+                TextColor="#FFBF34" />
+
+            <Label
+                Grid.Row="2"
+                FontSize="Medium"
+                Text="Full Name"
+                VerticalOptions="Center" />
+
+            <BoxView
+                Grid.Row="2"
+                Grid.Column="1"
+                BackgroundColor="#FFBF34"
+                HeightRequest="2"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="End" />
+
+            <Entry
+                x:Name="nameBox"
+                Grid.Row="2"
+                Grid.Column="1"
+                Placeholder="Enter your Full Name" />
+
+
+            <Label
+                Grid.Row="3"
+                FontSize="Medium"
+                Text="Email"
+                VerticalOptions="Center" />
+
+            <BoxView
+                Grid.Row="3"
+                Grid.Column="1"
+                BackgroundColor="#FFBF34"
+                HeightRequest="2"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="End" />
+
+            <Entry
+                x:Name="emailBox"
+                Grid.Row="3"
+                Grid.Column="1"
+                Placeholder="Enter your xyz@gmail.com" />
+
+            <Label
+                Grid.Row="4"
+                FontSize="Medium"
+                Text="Gender"
+                VerticalOptions="Center" />
+
+            <BoxView
+                Grid.Row="4"
+                Grid.Column="1"
+                BackgroundColor="#FFBF34"
+                HeightRequest="2"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="End" />
+
+            <Label
+                x:Name="genderLable"
+                Grid.Row="4"
+                Grid.Column="1"
+                Padding="10"
+                Text="Select Gender"
+                TextColor="Gray"
+                VerticalTextAlignment="Center" />
+
+
+            <Picker
+                x:Name="genderBox"
+                Grid.Row="4"
+                Grid.Column="1"
+                SelectedIndexChanged="genderBox_PropertyChanged">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Male</x:String>
+                        <x:String>Female</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label
+                Grid.Row="5"
+                FontSize="Medium"
+                Text="Password"
+                VerticalOptions="Center" />
+
+            <BoxView
+                Grid.Row="5"
+                Grid.Column="1"
+                BackgroundColor="#FFBF34"
+                HeightRequest="2"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="End" />
+
+            <Entry
+                x:Name="passBtn"
+                Grid.Row="5"
+                Grid.Column="1"
+                IsPassword="True"
+                Placeholder="Pas*******rd" />
+
+
+            <CheckBox
+                Grid.Row="5"
+                Grid.Column="1"
+                CheckedChanged="CheckBox_Pass"
+                HorizontalOptions="End"
+                IsChecked="False"
+                VerticalOptions="Center"
+                Color="Blue" />
+
+            <Label
+                Grid.Row="6"
+                FontSize="Medium"
+                Text="Confirm Pass"
+                VerticalOptions="Center" />
+
+            <BoxView
+                Grid.Row="6"
+                Grid.Column="1"
+                BackgroundColor="#FFBF34"
+                HeightRequest="2"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="End" />
+
+            <Entry
+                x:Name="confBtn"
+                Grid.Row="6"
+                Grid.Column="1"
+                IsPassword="True"
+                Placeholder="Confirm Pas*******rd" />
+
+
+            <CheckBox
+                Grid.Row="6"
+                Grid.Column="1"
+                CheckedChanged="CheckBox_Conf"
+                HorizontalOptions="End"
+                IsChecked="False"
+                VerticalOptions="Center"
+                Color="Blue" />
+
+
+            <Button
+                x:Name="regBtn"
+                Grid.Row="7"
+                Grid.ColumnSpan="2"
+                Margin="0,40,0,0"
+                BackgroundColor="#FFBF34"
+                Clicked="regBtn_Clicked"
+                FontAttributes="Bold"
+                FontSize="Medium"
+                HorizontalOptions="CenterAndExpand"
+                Text="Register"
+                TextColor="Black" />
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
